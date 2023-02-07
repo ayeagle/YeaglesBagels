@@ -1,10 +1,10 @@
 import React, { Component, useState, useEffect } from 'react'
 import styles from './LoginInput.module.css'
-import CheckUser from '@components/DBcomponents/CheckUser';
-import AddNewUser from '@components/DBcomponents/AddNewUser';
+// import CheckUser from '@components/DBcomponents/CheckUser';
+// import AddNewUser from '@components/DBcomponents/AddNewUser';
 import About from 'pages/about';
-import ValidateLogin from '@components/DBcomponents/ValidateLogin';
-import UserPreferences from '@components/bio/UserPreferences';
+// import ValidateLogin from '@components/DBcomponents/ValidateLogin';
+// import UserPreferences from '@components/bio/UserPreferences';
 // import LogActivity from '@components/DBcomponents/LogActivity';
 
 

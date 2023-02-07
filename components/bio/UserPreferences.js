@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './SignupLogin.module.css'
 import LoginInput from './LoginInput';
 import LoginWindow from './LoginWindow';
-import LogActivity from '@components/DBcomponents/LogActivity';
+// import LogActivity from '@components/DBcomponents/LogActivity';
 
 export default function UserPreferences({ setLoginOrSignUp }) {
 

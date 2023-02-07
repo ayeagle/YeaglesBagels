@@ -3,7 +3,7 @@ import styles from './LoginInput.module.css'
 // import CheckUser from '@components/DBcomponents/CheckUser';
 // import AddNewUser from '@components/DBcomponents/AddNewUser';
 import About from 'pages/about';
-import LogActivity from '@components/DBcomponents/LogActivity';
+// import LogActivity from '@components/DBcomponents/LogActivity';
 
 export default function LoginInput({ type, inputPrompt1, fieldPrompt, setLoginOrSignUp }) {
     const [userCheckVal, setUserCheckVal] = useState('')
