@@ -1,23 +1,77 @@
 import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Second from '../components/pomodomo/second'
+import React, { useState, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux";
+import { updateBreakTime, updateIterations, updateReady, updatePage, updateWorkTime, updateTotalTime, updateTimeRemain, updateTimeActive } from 'src/actions/cartAction'
+// import Main from '@components/pomodomo/Main'
+import Break from '@components/pomodomo/Break'
+import Finished from '@components/pomodomo/Finished'
+import Waves from '@components/pomodomo/Waves'
 
-export default function Home() {
+// import About from './About';  // this is the React component you want to render
+
+import About from './about';
+
+
+export default function Index() {
+
+  // return <About/>
+
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+
+  console.log("minor change is in effect now")
+  console.log("removed the stupid fucking about import")
+
+
+  const [count, setCount] = useState(0);
+  const [workTime, setWorkTime] = useState(0);   //set these to state. values?
+  const [breakTime, setBreakTime] = useState(0);
+  const [iterations, setIterations] = useState(0);
+  const [totalTime, setTotalTime] = useState(0);
+  const [timeRemain, setTimeRemain] = useState(0);
+  const [timeActive, setTimeActive] = useState(true);
+  const [ready, setReady] = useState(false);
+  const [limiter, setLimiter] = useState(0)
+
+
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <About />
+    // <Main />
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
-    </div>
   )
+  // return (
+  //   <Router>
+  //     <Route path="/about" component={About} />
+  //   </Router>
+  // );
+
+  // const sendPage = () => {
+  //   switch (state.page) {
+  //     case "main":
+  //       return <Main />
+
+  //     case "work":
+  //       return <Second />
+
+  //     case "break":
+  //       return <Break />
+
+  //     case "finished":
+  //       return <Finished />
+
+  //     default:
+  //       return <Main />
+
+  //   }
+  // )
+  //   }
+
+  //   return(
+  //     <>
+  //     <Waves/>
+  //     {sendPage()}
+  //     </>
+  //   )
+
 }
